@@ -22,14 +22,14 @@ overflow-x:hidden;
 
 h1{
 font-family:'Pacifico',cursive;
-font-size:50px;
+font-size:55px;
 color:white;
-margin-top:60px;
-text-shadow:0 0 15px #ff4fa3;
+margin-top:70px;
+text-shadow:0 0 20px #ff4fa3;
 }
 
 .gift{
-font-size:110px;
+font-size:120px;
 cursor:pointer;
 transition:0.4s;
 }
@@ -44,7 +44,7 @@ animation:openGift 1s forwards;
 
 @keyframes openGift{
 0%{transform:scale(1)}
-50%{transform:scale(1.4) rotate(10deg)}
+50%{transform:scale(1.5) rotate(10deg)}
 100%{transform:scale(0);opacity:0}
 }
 
@@ -70,22 +70,6 @@ box-shadow:0 0 30px rgba(0,0,0,0.3);
 margin-top:20px;
 }
 
-.musicBtn{
-margin-top:30px;
-padding:15px 30px;
-font-size:20px;
-border:none;
-border-radius:15px;
-background:#ff4fa3;
-color:white;
-cursor:pointer;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-
-.musicBtn:hover{
-transform:scale(1.1);
-}
-
 .heart{
 position:fixed;
 top:-10px;
@@ -102,16 +86,17 @@ transform:translateY(110vh);
 @media (max-width:600px){
 
 h1{
-font-size:34px;
+font-size:36px;
 margin-top:40px;
 }
 
 .text{
 font-size:18px;
+padding:10px;
 }
 
 .gift{
-font-size:85px;
+font-size:90px;
 }
 
 }
@@ -148,11 +133,9 @@ font-size:85px;
 дякую за суп з хвіста лали 🐱
 </p>
 
-<button class="musicBtn" onclick="playMusic()">Бульварчик 🎵</button>
-
 </div>
 
-<audio id="song" loop>
+<audio autoplay loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -167,10 +150,6 @@ document.getElementById("gift").style.display="none";
 document.getElementById("content").style.display="block";
 },900);
 
-}
-
-function playMusic(){
-document.getElementById("song").play();
 }
 
 function createHeart(){
@@ -199,5 +178,7 @@ setInterval(createHeart,250);
 
 </script>
 
+</body>
+</html>
 </body>
 </html>
